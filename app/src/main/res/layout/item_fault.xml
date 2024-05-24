@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/faultItemHeaderSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nguoi cham"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/faultItemHeaderUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:text="Don vi nguoi cham"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/faultItemHeaderSource"
+        app:layout_constraintStart_toEndOf="@+id/faultItemHeaderSource"
+        app:layout_constraintTop_toTopOf="@+id/faultItemHeaderSource" />
+
+    <TextView
+        android:id="@+id/faultItemHeaderRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:text="Vai tro cua nguoi cham"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/faultItemHeaderUnit"
+        app:layout_constraintStart_toEndOf="@+id/faultItemHeaderUnit"
+        app:layout_constraintTop_toTopOf="@+id/faultItemHeaderUnit" />
+
+
+    <TextView
+        android:id="@+id/faultItemHeaderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:text="Ngay cham"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/faultItemHeaderSource"
+        app:layout_constraintTop_toBottomOf="@+id/faultItemHeaderSource" />
+
+    <TextView
+        android:id="@+id/faultItemHeaderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:text="Thoi gian cham"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/faultItemHeaderDate"
+        app:layout_constraintStart_toEndOf="@+id/faultItemHeaderDate"
+        app:layout_constraintTop_toTopOf="@+id/faultItemHeaderDate" />
+
+    <TextView
+        android:id="@+id/faultItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:text="Ten nguoi vi pham"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/faultItemHeaderDate"
+        app:layout_constraintTop_toBottomOf="@+id/faultItemHeaderDate" />
+
+    <TextView
+        android:id="@+id/faultItemUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:text="Don vi nguoi vi pham"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/faultItemName"
+        app:layout_constraintStart_toEndOf="@+id/faultItemName"
+        app:layout_constraintTop_toTopOf="@+id/faultItemName" />
+
+    <TextView
+        android:id="@+id/faultItemFault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:maxLines="4"
+        android:text="Loi nguoi vi pham"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/faultItemName"
+        app:layout_constraintTop_toBottomOf="@+id/faultItemName" />
+
+
+    <TextView
+        android:id="@+id/faultItemPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diem tru"
+        android:layout_marginHorizontal="5dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/faultItemFault"
+        app:layout_constraintStart_toEndOf="@+id/faultItemFault"
+        app:layout_constraintTop_toTopOf="@+id/faultItemFault" />
+
+    <ImageView
+        android:id="@+id/faultItemImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?attr/colorPrimary"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/faultItemFault"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

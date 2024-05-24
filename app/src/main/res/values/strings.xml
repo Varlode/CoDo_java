@@ -1,0 +1,51 @@
+<resources>
+    <!--  All  -->
+    <string name="appIconDesc">App Icon</string>
+    <string name="app_name">Chấm thi đua</string>
+
+    <!--  Login Screen  -->
+    <string name="sign_up_text">Liên hệ BCH Đoàn trường để cấp tài khoản</string>
+    <string name="username_hint">Tên đăng nhập</string>
+    <string name="password_hint">Mật khẩu</string>
+    <string name="login_title">@string/app_name</string>
+    <string name="login_button_text">Đăng nhập</string>
+    <string name="credit_text">Thực hiện bởi Nguyễn Ngọc Tỷ \n THPT Bình Minh - 2024</string>
+    <string name="login_success">"Đăng nhập thành công"</string>
+    <string name="login_failure">"Đăng nhập thất bại</string>
+    <string name="login_error">"Thông tin đăng nhập sai"</string>
+    <string name="login_null">"Tên đăng nhập và Mật khẩu không thể để trống"</string>
+
+    <!--  Home Screen  -->
+    <string name="name_text">Họ và tên:</string>
+    <string name="name_hint">Họ và tên</string>
+    <string name="role_text">Vai trò:</string>
+    <string name="role_hint">Vai trò</string>
+    <string name="update_text">Nhập</string>
+    <string name="read_text">Thống kê</string>
+    <string name="export_text">Xuất tệp</string>
+    <string name="setup_text">Thiết lập</string>
+
+    <!-- Set up Page -->
+    <string name="user_title">Tài khoản</string>
+    <string name="role_title">Vai trò</string>
+    <string name="unit_title">Đơn vị</string>
+    <string name="fault_title">Lỗi vi phạm</string>
+    <string name="username_text">Tên đăng nhập:</string>
+    <string name="password_text">Mật khẩu:</string>
+    <string name="unit_text">Đơn vị:</string>
+    <string name="unit_hint">11A1</string>
+    <string name="fault_text">Lỗi vi phạm:</string>
+    <string name="fault_hint">Lỗi vi phạm</string>
+    <string name="setup_user_text">Thêm</string>
+    <string name="delete_user_text">Xóa</string>
+    <string name="setup_role_text">Thêm</string>
+    <string name="delete_role_text">Xóa</string>
+    <string name="setup_unit_text">Thêm</string>
+    <string name="delete_unit_text">Xóa</string>
+    <string name="setup_fault_text">Thêm</string>
+    <string name="delete_fault_text">Xóa</string>
+
+    <!--  Update page  -->
+    <string name="image_text">Hình ảnh:</string>
+    <string name="camera_button_text">Chụp ảnh</string>
+</resources>

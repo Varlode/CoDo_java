@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/update_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateActivity">
+
+    <Toolbar
+        android:id="@+id/updateToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <ImageButton
+            android:id="@+id/updateBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorPrimary"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/updateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_text"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateToolbar">
+
+        <TextView
+            android:id="@+id/updateFaultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fault_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/updateFaultSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_border"
+            android:paddingHorizontal="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/updateFaultText"
+            app:layout_constraintStart_toStartOf="@+id/updateFaultText"
+            app:layout_constraintTop_toBottomOf="@+id/updateFaultText" />
+
+        <TextView
+            android:id="@+id/updateNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/name_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/updateFaultSpinner"
+            app:layout_constraintStart_toStartOf="@+id/updateFaultSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/updateFaultSpinner" />
+
+        <EditText
+            android:id="@+id/updateNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_border"
+            android:hint="@string/name_hint"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="4dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/updateNameText"
+            app:layout_constraintStart_toStartOf="@+id/updateNameText"
+            app:layout_constraintTop_toBottomOf="@+id/updateNameText" />
+
+        <TextView
+            android:id="@+id/updateUnitText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/unit_text"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/updateNameInput" />
+
+        <Spinner
+            android:id="@+id/updateUnitSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_border"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="5dp"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/updateUnitText" />
+
+        <TextView
+            android:id="@+id/updateImageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/image_text"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/updateUnitSpinner" />
+
+        <ImageView
+            android:id="@+id/updateImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/person"
+            app:layout_constraintBottom_toTopOf="@+id/updateCameraButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateImageText" />
+
+        <Button
+            android:id="@+id/updateCameraButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="188dp"
+            android:text="@string/camera_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/updateUpdateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_text"
+            app:layout_constraintEnd_toEndOf="@+id/updateCameraButton"
+            app:layout_constraintStart_toStartOf="@+id/updateCameraButton"
+            app:layout_constraintTop_toBottomOf="@+id/updateCameraButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

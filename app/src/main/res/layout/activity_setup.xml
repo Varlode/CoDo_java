@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupActivity">
+
+    <Toolbar
+        android:id="@+id/setupToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <ImageButton
+            android:id="@+id/setupBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorPrimary"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/setupTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setup_text"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setupToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/setupUserTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_title"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/setupNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupUserTitle" />
+
+            <EditText
+                android:id="@+id/setupNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_border"
+                android:hint="@string/name_hint"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupNameText" />
+
+            <TextView
+                android:id="@+id/setupUsernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/username_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupNameInput" />
+
+            <EditText
+                android:id="@+id/setupUsernameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_border"
+                android:hint="@string/username_hint"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupUsernameText" />
+
+            <TextView
+                android:id="@+id/setupPasswordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/password_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupUsernameInput" />
+
+            <EditText
+                android:id="@+id/setupPasswordInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_border"
+                android:hint="@string/password_hint"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupPasswordText" />
+
+            <TextView
+                android:id="@+id/setupUserRoleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/role_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupPasswordInput" />
+
+            <Spinner
+                android:id="@+id/setupUserRoleSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/custom_border"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="5dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/setupUserRoleText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/setupUserRoleText"
+                app:layout_constraintTop_toTopOf="@+id/setupUserRoleText" />
+
+            <TextView
+                android:id="@+id/setupUserUnitText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/unit_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupUserRoleSpinner" />
+
+            <Spinner
+                android:id="@+id/setupUserUnitSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/custom_border"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="5dp"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="@+id/setupUserUnitText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/setupUserUnitText"
+                app:layout_constraintTop_toTopOf="@+id/setupUserUnitText" />
+
+            <Button
+                android:id="@+id/setupUserButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/setup_user_text"
+                app:layout_constraintEnd_toEndOf="@+id/setupUserUnitText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/setupUserUnitText"
+                app:layout_constraintTop_toBottomOf="@+id/setupUserUnitText" />
+
+            <Button
+                android:id="@+id/deleteUserButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_user_text"
+                app:layout_constraintBottom_toBottomOf="@+id/setupUserButton"
+                app:layout_constraintEnd_toEndOf="@+id/setupUserUnitSpinner"
+                app:layout_constraintTop_toTopOf="@+id/setupUserButton" />
+
+            <TextView
+                android:id="@+id/setupUnitTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_title"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupUserButton" />
+
+            <TextView
+                android:id="@+id/setupUnitText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/unit_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupUnitTitle" />
+
+            <EditText
+                android:id="@+id/setupUnitInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/custom_border"
+                android:hint="@string/unit_hint"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/setupUnitText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/setupUnitText"
+                app:layout_constraintTop_toTopOf="@+id/setupUnitText" />
+
+            <Button
+                android:id="@+id/setupUnitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/setup_unit_text"
+                app:layout_constraintStart_toStartOf="@+id/setupUnitText"
+                app:layout_constraintTop_toBottomOf="@+id/setupUnitText" />
+
+            <Button
+                android:id="@+id/deleteUnitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_unit_text"
+                app:layout_constraintBottom_toBottomOf="@+id/setupUnitButton"
+                app:layout_constraintEnd_toEndOf="@+id/setupUnitInput"
+                app:layout_constraintTop_toTopOf="@+id/setupUnitButton" />
+
+            <TextView
+                android:id="@+id/setupRoleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/role_title"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupUnitButton" />
+
+            <TextView
+                android:id="@+id/setupRoleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/role_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupRoleTitle" />
+
+            <EditText
+                android:id="@+id/setupRoleInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/custom_border"
+                android:hint="@string/role_hint"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/setupRoleText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/setupRoleText"
+                app:layout_constraintTop_toTopOf="@+id/setupRoleText" />
+
+            <Button
+                android:id="@+id/setupRoleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/setup_role_text"
+                app:layout_constraintStart_toStartOf="@+id/setupRoleText"
+                app:layout_constraintTop_toBottomOf="@+id/setupRoleText" />
+
+            <Button
+                android:id="@+id/deleteRoleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_role_text"
+                app:layout_constraintBottom_toBottomOf="@+id/setupRoleButton"
+                app:layout_constraintEnd_toEndOf="@+id/setupRoleInput"
+                app:layout_constraintTop_toTopOf="@+id/setupRoleButton" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fault_title"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupRoleButton" />
+
+            <TextView
+                android:id="@+id/setupFaultRoleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/role_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Spinner
+                android:id="@+id/setupFaultRoleSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/custom_border"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="5dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/setupFaultRoleText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/setupFaultRoleText"
+                app:layout_constraintTop_toTopOf="@+id/setupFaultRoleText" />
+
+            <TextView
+                android:id="@+id/setupFaultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/fault_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupFaultRoleText" />
+
+            <EditText
+                android:id="@+id/setupFaultInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/custom_border"
+                android:hint="@string/fault_hint"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/setupFaultText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/setupFaultText"
+                app:layout_constraintTop_toTopOf="@+id/setupFaultText" />
+
+            <TextView
+                android:id="@+id/setupPointText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Trừ"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupFaultText" />
+
+            <EditText
+                android:id="@+id/setuptPointInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/custom_border"
+                android:hint="Điểm"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/setupPointText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/setupPointText"
+                app:layout_constraintTop_toTopOf="@+id/setupPointText"/>
+
+            <Button
+                android:id="@+id/setupFaultButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/setup_fault_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setupPointText" />
+
+            <Button
+                android:id="@+id/deleteFaultButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_fault_text"
+                app:layout_constraintBottom_toBottomOf="@+id/setupFaultButton"
+                app:layout_constraintEnd_toEndOf="@+id/setupFaultInput"
+                app:layout_constraintTop_toTopOf="@+id/setupFaultButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
